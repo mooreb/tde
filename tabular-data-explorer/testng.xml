@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="all groups" verbose="1">
+    <test name="all unit tests">
+        <groups>
+            <run>
+                <include name="unit"/>
+                <exclude name="integration"/>
+                <exclude name="broken"/>
+         </run>
+        </groups>
+        <packages>
+            <package name=".*"></package>
+        </packages>
+    </test>
+</suite>
